@@ -1,0 +1,10 @@
+## Technical Things: 
+
+
+- Market Trading = Automatically buying for lowest avalible, selling for highest limit. 
+
+- Limit Trading = You set the price yourself. If the price you sell at is higher than the market price, you can only sell that stock once a limit buyer buys for the 
+increased price, or the avaliblitly of all lower stocks runs out, in which case your stock becomes the new lowest on the market, becoming the market standard.
+
+- NOTE | If limit trading is not used, the market price for that stock will not change. Market trading as it's designed in the real world, only buys and sells for 
+market price. Limit trading is required for stock prices to change.
