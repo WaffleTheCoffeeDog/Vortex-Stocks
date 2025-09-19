@@ -17,7 +17,7 @@ function showContent() {
 //Chart.js configuration
 
 // Sample data
-const data = [
+var data = [
   { year: '2019', count: 10000, count2: 8000 },
   { year: '2020', count: 15000, count2: 12000 },
   { year: '2021', count: 25000, count2: 30000 },
@@ -25,12 +25,9 @@ const data = [
   { year: '2023', count: 50000, count2: 45000 }
 ];
 
-new Chart(
-    document.getElementById('myChart'),
-    {
-      type: 'line',
-      options: {
-        animation: false,
+var options = {
+  maintainAspectRatio: false,
+  animation: false,
         plugins: {
           legend: {
             display: true
@@ -39,23 +36,33 @@ new Chart(
             enabled: true
           }
         }
-      },
+}
+
+new Chart(
+    document.getElementById('myChart'),
+    {
+      type: 'line',
+      options: options,
       data: {
         labels: data.map(row => row.year),
         datasets: [
           {
             label: 'Total Money',
+            borderColor: '#ffb300',
+            backgroundColor: '#ff6600',
             data: data.map(row => row.count),
             segment: {
               borderColor: ctx => {
                 const current = ctx.p1.parsed.y;
                 const previous = ctx.p0.parsed.y;
-                return current >= previous ? '#00FFBB' : '#BBFF00';
+                return current >= previous ? '#ff6600' : '#ffb300';
               }
             }
           },
           {
             label: 'Stock Value',
+            borderColor: '#FF00BB',
+            backgroundColor: '#BB00FF',
             data: data.map(row => row.count2),
             segment: {
               borderColor: ctx => {

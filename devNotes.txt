@@ -8,3 +8,5 @@ increased price, or the avaliblitly of all lower stocks runs out, in which case 
 
 - NOTE | If limit trading is not used, the market price for that stock will not change. Market trading as it's designed in the real world, only buys and sells for 
 market price. Limit trading is required for stock prices to change.
+
+- A ticker is shortening a stock name. usulay 2-5 letters. Ex: Vortex ticker is VTX
