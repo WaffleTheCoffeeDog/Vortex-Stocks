@@ -76,3 +76,9 @@ new Chart(
       }
     }
   );
+
+  //index js
+
+  function href(url) {
+  window.location.href = url;
+}

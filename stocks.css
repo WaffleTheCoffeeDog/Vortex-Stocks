@@ -224,7 +224,7 @@ body {
 .t_action_log {
   text-align: center;
   margin: auto;
-  width: auto;
+  width: 100%;
   border-color: #2a2a2a;
   background-color: #0000007f;
   border-radius: 10px;
