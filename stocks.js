@@ -48,14 +48,14 @@ new Chart(
         datasets: [
           {
             label: 'Total Money',
-            borderColor: '#ffb300',
-            backgroundColor: '#ff6600',
+            borderColor: '#00FFAA',
+            backgroundColor: '#00AABB',
             data: data.map(row => row.count),
             segment: {
               borderColor: ctx => {
                 const current = ctx.p1.parsed.y;
                 const previous = ctx.p0.parsed.y;
-                return current >= previous ? '#ff6600' : '#ffb300';
+                return current >= previous ? '#00FFAA' : '#00AABB';
               }
             }
           },
@@ -68,7 +68,7 @@ new Chart(
               borderColor: ctx => {
                 const current = ctx.p1.parsed.y;
                 const previous = ctx.p0.parsed.y;
-                return current >= previous ? '#BB00FF' : '#FF00BB';
+                return current >= previous ? '#FF00BB' : '#BB00FF';
               }
             }
           }
@@ -77,6 +77,32 @@ new Chart(
     }
   );
 
+
+  new Chart(
+    document.getElementById('stockChart'),
+    {
+      type: 'line',
+      options: options,
+      data: {
+        labels: data.map(row => row.year),
+        datasets: [
+          {
+            label: 'Portfolio Value',
+            borderColor: '#00FFAA',
+            backgroundColor: '#00AABB',
+            data: data.map(row => row.count2 + row.count),
+            segment: {
+              borderColor: ctx => {
+                const current = ctx.p1.parsed.y;
+                const previous = ctx.p0.parsed.y;
+                return current >= previous ? '#00FFAA' : '#00AABB';
+              }
+            }
+          }
+        ]
+      }
+    }
+  );
   //index js
 
   function href(url) {
